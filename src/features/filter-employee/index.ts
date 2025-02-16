@@ -1,1 +1,1 @@
-export { } from './ui/FilterEmployees'
+export { FilterEmployees } from './ui/FilterEmployees'

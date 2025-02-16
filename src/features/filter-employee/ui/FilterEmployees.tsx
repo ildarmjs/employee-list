@@ -6,7 +6,7 @@ import styles from './FilterEmployees.module.scss'
 
 interface FilterEmployeesProps {}
 
-const FilterEmployees: FC<FilterEmployeesProps> = () => {
+export const FilterEmployees: FC<FilterEmployeesProps> = () => {
 	const dispatch = useDispatch()
 	const filter = useSelector((state: RootState) => state.employee.filter)
 
@@ -53,5 +53,3 @@ const FilterEmployees: FC<FilterEmployeesProps> = () => {
 		</div>
 	)
 }
-
-export default FilterEmployees
