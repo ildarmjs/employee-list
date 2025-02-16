@@ -1,0 +1,21 @@
+.label {
+	@media (max-width: 480px) {
+		font-size: 14px;
+	}
+}
+.checkbox {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	margin-right: 10px;
+	width: 18px;
+	height: 18px;
+	&:checked {
+		accent-color: #4caf50;
+	}
+
+	@media (max-width: 480px) {
+		width: 16px;
+		height: 16px;
+	}
+}
