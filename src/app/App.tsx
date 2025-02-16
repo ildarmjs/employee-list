@@ -2,8 +2,8 @@ import { FC } from 'react'
 import { RouterProvider, StoreProvider } from './providers'
 import { Route, Routes } from 'react-router-dom'
 import { EmployeeListPage } from '../pages/employee-list-page'
-import { EmployeeEditPage } from '../pages/employee-edit-page/ui/EmployeeEditPage'
-import { EmployeeAddPage } from '../pages/employee-add/ui/EmployeeAddPage'
+import { EmployeeEditPage } from '../pages/employee-edit-page'
+import { EmployeeAddPage } from '../pages/employee-add'
 
 interface AppProps {}
 
