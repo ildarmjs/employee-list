@@ -5,6 +5,8 @@ import { SortEmployee } from '../../../features/sort-employee'
 import { Employee } from '../../../shared/types'
 import { useEmployeeList } from '../lib/useEmployeeList'
 import { FilterEmployees } from '../../../features/filter-employee'
+import { ErrorBoundary } from '../../../shared/ui/error-boundary'
+import { EmployeeCard } from '../../../entities/employee'
 
 export const EmployeeList: FC = () => {
 	const { sortedEmployees, handleSort } = useEmployeeList()
@@ -18,23 +20,9 @@ export const EmployeeList: FC = () => {
 			<FilterEmployees />
 			<ul className={styles.employeeList}>
 				{sortedEmployees.map((employee: Employee) => (
-					<Link
-						key={employee.id}
-						to={`/employees/${employee.id}`}
-						className={styles.employeeLink}
-					>
-						<li className={styles.employeeItem}>
-							<div className={styles.employeeName}>{employee.name}</div>
-							<div className={styles.employeeRole}>
-								{employee.role === 'driver'
-									? 'Водитель'
-									: employee.role === 'waiter'
-									? 'Официант'
-									: 'Повар'}
-							</div>
-							<div className={styles.employeePhone}>{employee.phone}</div>
-						</li>
-					</Link>
+					<ErrorBoundary>
+						<EmployeeCard employee={employee} key={employee.id} />
+					</ErrorBoundary>
 				))}
 			</ul>
 		</div>
