@@ -1,0 +1,38 @@
+.inputField {
+	position: relative;
+}
+.label {
+	display: block;
+	margin-bottom: 5px;
+	@media (max-width: 480px) {
+		font-size: 12px;
+	}
+}
+.input {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	transition: border-color 0.3s ease;
+
+	&:focus {
+		outline: none;
+		border-color: #4caf50;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 14px;
+		padding: 8px;
+	}
+}
+.inputError {
+	border-color: #d42e2e;
+}
+.error {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	color: #d42e2e;
+	font-size: 12px;
+}

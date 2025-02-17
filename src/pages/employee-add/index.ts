@@ -1,0 +1,1 @@
+export { EmployeeAddPage } from './ui/EmployeeAddPage'
