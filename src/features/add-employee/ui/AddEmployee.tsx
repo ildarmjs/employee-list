@@ -40,7 +40,7 @@ export const AddEmployee: FC<AddEmployeeProps> = () => {
 					name='name'
 					value={formData.name}
 					onChange={handleChange}
-					label='Имя'
+					label='Имя и Фамилия'
 					className={styles.input}
 					error={errors.name}
 				/>
